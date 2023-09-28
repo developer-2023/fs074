@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inherit - forced inheritance</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        div {
+            border: 1px solid red;
+            min-height: 10px;
+            text-align: center;
+            margin: auto;
+        }
+        .outer {
+            margin: 20px;
+            width: 50%; /* width property is not iherited */
+        }
+        .inner2 {
+            width: inherit; /* but inheritance can be forced */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        outer
+        <div class="inner1">
+            inner
+            <div class="inner1">
+                inner
+                <div class="inner1">
+                    inner
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer">
+        outer
+        <div class="inner2">
+            inner
+            <div class="inner2">
+                inner
+                <div class="inner2">
+                    inner
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
